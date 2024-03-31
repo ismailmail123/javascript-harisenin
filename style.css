@@ -172,7 +172,14 @@ img{
 .embed.show{
     display: inline-block;
 }
-  
+.know-more{
+    background-color: rgb(83, 168, 201);
+    color: white;
+    border: 2px solid rgb(178, 76, 100);
+    border-radius: 10px;
+    padding: 2px;
+    font-weight: bold;
+} 
   
   @media screen and (max-height: 450px) {
     .overlay a {font-size: 20px}
