@@ -31,6 +31,10 @@ function getMovies(url) {
     function renderMovie (data) {     
         
         const containerElement = document.getElementsByTagName('div')[1];
+        const slidersElement = document.getElementById('container')
+        
+
+
         // const data = movie.results
         
         data.forEach(movie => {
@@ -40,6 +44,8 @@ function getMovies(url) {
             const divElement = document.createElement('div')
             divElement.classList.add('card-i-do')
             divElement.innerHTML = `
+          
+            
             <img class="image-card" src="https://image.tmdb.org/t/p/w500${poster_path}" >
             <h3> 
                 ${title}   
@@ -57,13 +63,45 @@ function getMovies(url) {
             </div>
             `
             containerElement.appendChild(divElement)
-
             document.getElementById(id).addEventListener('click', () => {
               console.log("ididididididid", id)
               openNav(movie)
-            })
 
+
+            })
+            
+            
+          
+       
         });
+        const sliderElement = document.createElement('div');
+          sliderElement.classList.add('banner');
+
+          
+            // sliderElement.style.backgroundImage = `url("/background.jpg")`;
+         
+          sliderElement.scroll({
+            top: 100,
+            left: 100,
+            behavior: "smooth",
+          });
+        
+          
+          sliderElement.innerHTML = `
+          <video autoplay muted loop poster="background.jpg" id="myVideo">
+                <source src="godzilla2.mp4" type="video/mp4">
+          </video>
+          <div class="video-info">
+            <h2>Godzilla x Kong</h2>
+            <h4>The New Empire</h4>
+            <p>
+              Following their explosive showdown, Godzilla and Kong must 
+              reunite against a colossal undiscovered threat hidden within our world, 
+              challenging their very existence – and our own.
+            <p>
+          </div>
+          `
+          slidersElement.appendChild(sliderElement)
        
         
     }

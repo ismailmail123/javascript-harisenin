@@ -37,12 +37,33 @@ img{
     width: 50px;
 }
 
-.container{
+.banner{
+    width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 2rem;
-
+    overflow: hidden;
+}
+.myVideo{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+}
+.video-info{
+    color: white;
+    position: absolute;
+    width: 50%;
+    margin-left: 50px;
+    height: 100vh;
+    margin-top: 70%;
+}
+.popularity{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 3rem;
+    margin-left: 10px;
 }
 
  /* start section about */
@@ -191,5 +212,9 @@ img{
   }
 
 
+
+
+
+  
   
 
