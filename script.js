@@ -32,8 +32,6 @@ function getMovies(url) {
         
         const containerElement = document.getElementsByTagName('div')[1];
         const bannersElement = document.getElementById('container')
-     
-        // const data = movie.results
         
         data.forEach(movie => {
             console.log('ini adalah element yang ditampilkan' ,movie)
@@ -74,9 +72,6 @@ function getMovies(url) {
         });
         const bannerElement = document.createElement('div');
           bannerElement.classList.add('banner');
-
-            // bannerElement.style.backgroundImage = `url("/background.jpg")`;
-         
           bannerElement.innerHTML = `
           <video autoplay muted loop poster="./asset/background.jpg" id="myVideo">
                 <source src="./asset/godzilla2.mp4" type="video/mp4">

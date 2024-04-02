@@ -26,17 +26,6 @@ navbar{
     background: darkgrey;
     padding: 0 2rem;
 }
-/* navbar .ul-nav {
-    display: flex;
-    gap: 2rem;
-}
-.nav-list {
-    list-style: none;
-}
-.nav-list a{
-    text-decoration: none;
-    color: black;
-} */
 .search{
     background-color: transparent;
     border: 2px solid ar(--primary-color);
@@ -88,11 +77,6 @@ img{
     margin-top: 3rem;
     margin-left: 10px;
 }
-
- /* start section about */
- 
-
-
  .container-i-do{
     width: 100%;
     max-width: 768;
@@ -143,7 +127,6 @@ img{
         margin: 0 2rem;
         }
      }
-  /* end section about */
 
   .overview{
     position:absolute;
