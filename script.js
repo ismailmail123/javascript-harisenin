@@ -108,7 +108,7 @@ function getMovies(url) {
     function renderMovie (data) {     
         
         const containerElement = document.getElementsByTagName('div')[1];
-        const slidersElement = document.getElementById('container')
+        const bannersElement = document.getElementById('container')
      
         // const data = movie.results
         
@@ -149,14 +149,14 @@ function getMovies(url) {
           
        
         });
-        const sliderElement = document.createElement('div');
-          sliderElement.classList.add('banner');
+        const bannerElement = document.createElement('div');
+          bannerElement.classList.add('banner');
 
-            // sliderElement.style.backgroundImage = `url("/background.jpg")`;
+            // bannerElement.style.backgroundImage = `url("/background.jpg")`;
          
-          sliderElement.innerHTML = `
-          <video autoplay muted loop poster="background.jpg" id="myVideo">
-                <source src="godzilla2.mp4" type="video/mp4">
+          bannerElement.innerHTML = `
+          <video autoplay muted loop poster="./asset/background.jpg" id="myVideo">
+                <source src="./asset/godzilla2.mp4" type="video/mp4">
           </video>
           <div class="video-info">
             <h2>Godzilla x Kong</h2>
@@ -168,7 +168,7 @@ function getMovies(url) {
             <p>
           </div>
           `
-          slidersElement.appendChild(sliderElement)
+          bannersElement.appendChild(bannerElement)
         
     }
     // getMovie()
