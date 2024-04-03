@@ -5,6 +5,10 @@
     margin: 0 ;
     box-sizing: border-box;
 }
+:root{
+    --primary-color:#22254b;
+    --secondary-color: #373b69;
+}
 body{
     margin: 0;
     padding: 0;
@@ -22,7 +26,7 @@ navbar{
     background: darkgrey;
     padding: 0 2rem;
 }
-navbar .ul-nav {
+/* navbar .ul-nav {
     display: flex;
     gap: 2rem;
 }
@@ -32,7 +36,26 @@ navbar .ul-nav {
 .nav-list a{
     text-decoration: none;
     color: black;
+} */
+.search{
+    background-color: transparent;
+    border: 2px solid ar(--primary-color);
+    padding:0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    color:#fff;
+    font-family: inherit;
 }
+
+.search:focus{
+    outline:0;
+    background-color: var(--primary-color);
+}
+
+.search::placeholder{
+    color: #7378c5;
+}
+
 img{
     width: 50px;
 }
@@ -212,7 +235,15 @@ img{
   }
 
 
-
+  footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(205, 203, 203);
+    color: black;
+    text-align: center;
+    z-index: 99;
+  }
 
 
   

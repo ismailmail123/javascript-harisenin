@@ -5,7 +5,84 @@ const API_URL = BASE_URL + '/discover/movie?sort_by=popularity.desc&'+API_KEY;
 const IMG_URL = 'https://image.tmdb.org/t/p/w500';
 const searchURL = BASE_URL + '/search/movie?'+API_KEY;
 
-
+const genres = [
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 12,
+      "name": "Adventure"
+    },
+    {
+      "id": 16,
+      "name": "Animation"
+    },
+    {
+      "id": 35,
+      "name": "Comedy"
+    },
+    {
+      "id": 80,
+      "name": "Crime"
+    },
+    {
+      "id": 99,
+      "name": "Documentary"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 10751,
+      "name": "Family"
+    },
+    {
+      "id": 14,
+      "name": "Fantasy"
+    },
+    {
+      "id": 36,
+      "name": "History"
+    },
+    {
+      "id": 27,
+      "name": "Horror"
+    },
+    {
+      "id": 10402,
+      "name": "Music"
+    },
+    {
+      "id": 9648,
+      "name": "Mystery"
+    },
+    {
+      "id": 10749,
+      "name": "Romance"
+    },
+    {
+      "id": 878,
+      "name": "Science Fiction"
+    },
+    {
+      "id": 10770,
+      "name": "TV Movie"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    },
+    {
+      "id": 10752,
+      "name": "War"
+    },
+    {
+      "id": 37,
+      "name": "Western"
+    }
+  ]
 
   async function getMovie () {
     const response = await fetch(API_URL)
@@ -32,9 +109,7 @@ function getMovies(url) {
         
         const containerElement = document.getElementsByTagName('div')[1];
         const slidersElement = document.getElementById('container')
-        
-
-
+     
         // const data = movie.results
         
         data.forEach(movie => {
@@ -77,16 +152,8 @@ function getMovies(url) {
         const sliderElement = document.createElement('div');
           sliderElement.classList.add('banner');
 
-          
             // sliderElement.style.backgroundImage = `url("/background.jpg")`;
          
-          sliderElement.scroll({
-            top: 100,
-            left: 100,
-            behavior: "smooth",
-          });
-        
-          
           sliderElement.innerHTML = `
           <video autoplay muted loop poster="background.jpg" id="myVideo">
                 <source src="godzilla2.mp4" type="video/mp4">
@@ -102,7 +169,6 @@ function getMovies(url) {
           </div>
           `
           slidersElement.appendChild(sliderElement)
-       
         
     }
     // getMovie()
